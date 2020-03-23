@@ -12,9 +12,9 @@
 
 [온국민 힘/내/자! 프로젝트 실시~]
 
-![alt img](https://raw.githubusercontent.com/aijinet/doctor-contents/master/contents/202003/200311/corona19_event1.png)
+![alt img](https://raw.githubusercontent.com/aijinet/doctor-contents/master/contents/202003/200323/corona19_event1.png)
 
-![alt img](https://raw.githubusercontent.com/aijinet/doctor-contents/master/contents/202003/200311/corona19_event2.png)
+![alt img](https://raw.githubusercontent.com/aijinet/doctor-contents/master/contents/202003/200323/corona19_event2.png)
 
 보닥 앱을 이용하시고, 도움을 받으셨다면
 
