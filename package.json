@@ -1,0 +1,29 @@
+{
+  "name": "@aijinet/doctor-contents",
+  "version": "0.0.0",
+  "description": "보험닥터 컨텐츠 보관소",
+  "main": "bin/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "ban": "ts-node src/ban"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aijinet/doctor-contents"
+  },
+  "author": "Jeongho Nam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aijinet/doctor-contents/issues"
+  },
+  "homepage": "https://github.com/aijinet/doctor-contents#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "ts-node": "^8.10.1",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "tstl": "^2.4.6"
+  }
+}
