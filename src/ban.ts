@@ -1,6 +1,10 @@
 import * as fs from "fs";
 import { sort } from "tstl/ranges/algorithm/sorting";
 
+interface IBan
+{
+    words: string[];
+}
 interface IDetect
 {
     file: string;
@@ -16,7 +20,7 @@ function normalize(str: string): string
         .split(" ").join("");
 }
 
-async function iterate(banndTerms: string[], detects: IDetect[], path: string): Promise<void>
+async function iterate(ban: IBan, detects: IDetect[], path: string): Promise<void>
 {
     let fileList: string[] = await fs.promises.readdir(path);
     for (let file of fileList)
@@ -29,7 +33,7 @@ async function iterate(banndTerms: string[], detects: IDetect[], path: string): 
         if (stats.isDirectory() === true)
         {
             
-            await iterate(banndTerms, detects, currentPath);
+            await iterate(ban, detects, currentPath);
             continue;
         }
         else if (file.substr(-3) !== ".md")
@@ -40,7 +44,7 @@ async function iterate(banndTerms: string[], detects: IDetect[], path: string): 
         content = normalize(content);
 
         // FIND VIOLATIONS
-        let words: string[] = banndTerms.filter(str => content.indexOf(str) !== -1);
+        let words: string[] = ban.words.filter(str => content.indexOf(str) !== -1);
         if (words.length !== 0)
             detects.push({
                 file: currentPath.substr((__dirname + "/../").length),
@@ -52,13 +56,13 @@ async function iterate(banndTerms: string[], detects: IDetect[], path: string): 
 async function main(): Promise<void>
 {
     // GET FORBIDDEN WORDS
-    let bannedTerms: string[] = JSON.parse(await fs.promises.readFile(__dirname + "/../assets/config/banned_terms.json", "utf8"));
-    bannedTerms = bannedTerms.map(str => normalize(str));
-    sort(bannedTerms);
+    let ban: IBan = JSON.parse(await fs.promises.readFile(__dirname + "/../assets/config/ban.json", "utf8"));
+    ban.words = ban.words.map(str => normalize(str));
+    sort(ban.words);
     
     // DETECT BY ITERATIONS
     let detects: IDetect[] = [];
-    await iterate(bannedTerms, detects, __dirname + "/../contents");
+    await iterate(ban, detects, __dirname + "/../contents");
 
     // PRINT RESULT
     if (detects.length !== 0)
