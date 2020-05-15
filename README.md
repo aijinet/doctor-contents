@@ -40,14 +40,16 @@ code .
 ### Normal
 1. `contents` 폴더 안에 md 파일을 저장할 구조에 맞게 폴더를 생성
 2. 생성한 폴더 내에 md 파일을 작성 및 저장
-3. `git add .`
-4. `git commit m <your message>`
-5. `git push`
+3. `git` 으로 배포 이전에 아래의 `금지어 검사` 를 이용하거나 `ctrl`(window) or `command`(mac) + `shift` + `f` 를 이용해 금지어 검색을 실행해 볼 수 있음.
+4. `git add .`
+5. `git commit m <your message>`
+6. `git push`
+7. `git` 에 배포될 때 금지어 검사를 통과하지 않으면 배포를 실패하며 `README.md` 에서 배포 상태를 pass / fall 로 표현.
 
 ### 금지어 검사
 [![Build Status](https://github.com/aijinet/doctor-contents/workflows/ban/badge.svg)](https://github.com/aijinet/doctor-contents/actions?query=workflow%3Aban)
 
-컨텐츠를 변경하고 이를 `commit` 하거든, 자동으로 금지어 검사가 시작됩니다. 
+컨텐츠를 변경하고 이를 `commit` 하거든, 자동으로 금지어 검사가 시작됩니다.
 
 커밋이 완료된 후, 위 뱃지를 눌러 테스트 페이지로 이동해주십시오. 그리고 만일 해당 테스트 페이지에서 금지어가 검출되거든, 뱃지는 빨간색이 될 것이며, 테스트 페이지에서 상세 오류 사유를 확인하실 수 있습니다.
 
