@@ -1,6 +1,6 @@
 ## 한국 암보험 약관 변경에 따른 체크 사항
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sDG1Y1vxOjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### <iframe width="560" height="315" src="https://www.youtube.com/embed/sDG1Y1vxOjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 2020년 4월부터 암 보험금의 지금 기준이 변경되었습니다. 기존 암 보험자는 한국표준질병·사인분류(KCD)에 적용받지만, 4월 이후 가입자는 암 진단 시점의 KCD 적용을 받기 때문에 보험금이 변동될 수 있습니다.
 
